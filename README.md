@@ -221,15 +221,15 @@ Response
 
 # AWS Services Used
 
-  AWS Service                               Purpose
-  ------------------------------------------ -------------------------
-  Amazon Bedrock Knowledge Bases            Semantic retrieval
-  Amazon ECS Fargate                        Container orchestration
-  Amazon Elastic Container Registry (ECR)   Docker image storage
-  Application Load Balancer                 Traffic routing
-  AWS IAM                                    Secure permissions
-  AWS CloudWatch                             Logging and monitoring
-  AWS Secrets Manager                        Stores the Pinecone API key used by the Bedrock KBs
+| AWS Service                              | Purpose                                              |
+|-------------------------------------------|-------------------------------------------------------|
+| Amazon Bedrock Knowledge Bases            | Semantic retrieval                                     |
+| Amazon ECS Fargate                        | Container orchestration                                |
+| Amazon Elastic Container Registry (ECR)   | Docker image storage                                   |
+| Application Load Balancer                 | Traffic routing                                        |
+| AWS IAM                                   | Secure permissions                                     |
+| AWS CloudWatch                            | Logging and monitoring                                 |
+| AWS Secrets Manager                       | Stores the Pinecone API key used by the Bedrock KBs    |
 
 ------------------------------------------------------------------------
 
