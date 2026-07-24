@@ -81,17 +81,17 @@ through a single, unified conversational interface.
 The underlying `onyx-dot-app/EnterpriseRAG-Bench` dataset is highly
 imbalanced across sources:
 
-  Source          Documents
-  --------------- -----------
-  Slack           ~275,000
-  Gmail           ~120,000
-  Linear          ~35,000
-  Google Drive    ~25,000
-  HubSpot         ~15,000
-  Fireflies       ~10,000
-  GitHub          ~8,000
-  Jira            ~6,000
-  Confluence      ~5,000
+| Source       | Documents |
+|--------------|-----------|
+| Slack        | ~275,000  |
+| Gmail        | ~120,000  |
+| Linear       | ~35,000   |
+| Google Drive | ~25,000   |
+| HubSpot      | ~15,000   |
+| Fireflies    | ~10,000   |
+| GitHub       | ~8,000    |
+| Jira         | ~6,000    |
+| Confluence   | ~5,000    |
 
 After inspecting the full counts, only a random sample of up to 1000
 documents per source is used to build the knowledge bases, keeping the
@@ -118,17 +118,17 @@ project maintains **two Amazon Bedrock Knowledge Bases**, each tuned
 to a different retrieval pattern. The fixed-size KB chunks documents
 at 500 tokens with 10% overlap between chunks.
 
-  Data Source     Chunking Strategy   Reason
-  --------------- ------------------- ----------------------------------------------------
-  Confluence      Fixed-size          Long documentation benefits from semantic chunking
-  Fireflies       Fixed-size          Meeting transcripts retrieve better in sections
-  GitHub          Fixed-size          PRs and discussions carry large amounts of context
-  Google Drive    Fixed-size          Reports and docs often exceed the LLM context window
-  HubSpot         No chunking         Customer notes and records stay intact for context
-  Jira            No chunking         Issue threads preserve conversation and metadata
-  Linear          No chunking         Project specifications remain whole for retrieval
-  Slack           No chunking         Conversation threads preserve chat context
-  Gmail           No chunking         Email threads stay intact to preserve conversational context
+| Data Source  | Chunking Strategy | Reason                                                |
+|--------------|-------------------|--------------------------------------------------------|
+| Confluence    | Fixed-size        | Long documentation benefits from semantic chunking     |
+| Fireflies     | Fixed-size        | Meeting transcripts retrieve better in sections         |
+| GitHub        | Fixed-size        | PRs and discussions carry large amounts of context      |
+| Google Drive  | Fixed-size        | Reports and docs often exceed the LLM context window    |
+| HubSpot       | No chunking       | Customer notes and records stay intact for context      |
+| Jira          | No chunking       | Issue threads preserve conversation and metadata        |
+| Linear        | No chunking       | Project specifications remain whole for retrieval       |
+| Slack         | No chunking       | Conversation threads preserve chat context               |
+| Gmail         | No chunking       | Email threads stay intact to preserve conversational context |
 
 For every query, the backend retrieves from **both Knowledge Bases**,
 merges the results, ranks them by similarity score, and passes the
