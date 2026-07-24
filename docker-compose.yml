@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+
+  backend:
+
+    build: ./backend
+
+    container_name: enterprise-backend
+
+    ports:
+      - "8000:8000"
+    
+    env_file:
+      - ./backend/.env
+
+    volumes:
+      - ~/.aws:/root/.aws:ro
+
+  frontend:
+    build: ./frontend
+
+    container_name: enterprise-frontend
+
+    ports:
+      - "3000:3000"
+
+    env_file:
+      - ./frontend/.env.local
+
+    # Start the backend before the frontend
+    depends_on:
+      - backend
+
+
+
+
+#   cd "/Users/yukpinglee/Desktop/Cloud_Enterprise_Knowledge_Assistant/"
+
+#   docker compose up --build
+
+
+#    http://localhost:3000

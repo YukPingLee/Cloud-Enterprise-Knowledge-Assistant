@@ -1,0 +1,79 @@
+# ==========================
+# Python
+# ==========================
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# Environment Variables
+.env
+.env.*
+
+!.env.example
+!.env.local.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python Test Cache
+.pytest_cache/
+.mypy_cache/
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# ==========================
+# Node.js / Next.js
+# ==========================
+
+node_modules/
+.next/
+out/
+
+# npm
+npm-debug.log*
+
+# ==========================
+# Docker
+# ==========================
+
+docker-compose.override.yml
+
+# ==========================
+# Project Archives
+# ==========================
+
+Archived/
+
+# ==========================
+# Logs
+# ==========================
+
+*.log
+
+# ==========================
+# Build Files
+# ==========================
+
+dist/
+build/
+
+# ==========================
+# Data pipeline outputs (regenerable via data_pipeline notebooks)
+# ==========================
+
+data_pipeline/sources/
+data_pipeline/processed_sources/

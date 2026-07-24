@@ -1,0 +1,16 @@
+# Node packages
+node_modules/
+
+# Next.js build files
+.next/
+
+# Git
+.git
+.gitignore
+
+# Logs
+npm-debug.log
+
+# IDE files
+.vscode/
+.idea/
